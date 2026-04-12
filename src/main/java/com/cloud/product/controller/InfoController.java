@@ -1,13 +1,15 @@
 package com.cloud.product.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Map;
 
-@RestController("/products/vm")
+@RestController
+@RequestMapping("/products/vm")
 public class InfoController {
     @GetMapping("/info")
     public Map<String,String> getVmInfo() {
